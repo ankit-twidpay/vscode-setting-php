@@ -1,0 +1,29 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "files.autoSave": "afterDelay",
+    "php.validate.executablePath": "/Users/ankittiwari/.composer/vendor/bin/phpcs",
+
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "php.suggest.basic": false,
+    "[php]": {
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    },
+"[json]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"editor.codeActionsOnSave": {
+  "source.organizeImports": true
+},
+"php.validate.enable": true,
+"intelephense.environment.phpVersion": "8.1.20",
+"intelephense.phpdoc.classTemplate": {
+
+  "summary": "$1",
+  "tags": [
+    "@package ${1:$SYMBOL_NAMESPACE}"
+  ]
+},
+"editor.formatOnPaste": true,
+"editor.formatOnSaveMode": "modifications",
+}
