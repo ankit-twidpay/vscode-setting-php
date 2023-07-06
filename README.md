@@ -1,4 +1,4 @@
-# Visual Studio Code Setup
+# Visual Studio Code Setup (macOS)
 
 This script automates the installation and setup of Visual Studio Code (VS Code) on macOS using Homebrew. It installs VS Code (if you have already please uninstall), moves it to the Applications folder, sets up the PATH, installs recommended extensions, and copies the settings file.
 
