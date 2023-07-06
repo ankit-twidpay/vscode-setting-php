@@ -1,8 +1,6 @@
 {
     "workbench.colorTheme": "Default Light Modern",
     "files.autoSave": "afterDelay",
-    "php.validate.executablePath": "/Users/ankittiwari/.composer/vendor/bin/phpcs",
-
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
     "php.suggest.basic": false,
