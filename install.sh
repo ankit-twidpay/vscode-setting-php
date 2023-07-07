@@ -44,4 +44,6 @@ cat extensions.txt | xargs -L 1 code --install-extension
 
 # Copy settings file
 cp settings.json ~/Library/Application\ Support/Code/User/settings.json
+cp keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+
 echo "VS Code settings copied to the appropriate location."
