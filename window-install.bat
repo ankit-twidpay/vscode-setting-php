@@ -1,5 +1,19 @@
 @echo off
 
+rem Install Chocolatey (if not already installed)
+choco -? >nul 2>&1
+if %errorlevel% neq 0 (
+    echo Chocolatey is not installed. Installing Chocolatey...
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"
+)
+
+rem Check if Chocolatey installation was successful
+choco -? >nul 2>&1
+if %errorlevel% neq 0 (
+    echo Chocolatey installation failed. Please install Chocolatey manually and re-run the script.
+    exit /b 1
+)
+
 rem Install Visual Studio Code using Chocolatey
 choco install vscode -y
 
@@ -15,6 +29,20 @@ move "%USERPROFILE%\AppData\Local\Programs\Microsoft VS Code" "%ProgramFiles%\Mi
 
 rem Update permissions
 icacls "%ProgramFiles%\Microsoft VS Code\bin\code.cmd" /grant Everyone:F
+
+rem Check if PowerShell is installed
+where powershell >nul 2>&1
+if %errorlevel% neq 0 (
+    echo PowerShell is not installed. Installing PowerShell...
+    choco install powershell -y
+)
+
+rem Check if PowerShell installation was successful
+where powershell >nul 2>&1
+if %errorlevel% neq 0 (
+    echo PowerShell installation failed. Please install PowerShell manually and re-run the script.
+    exit /b 1
+)
 
 rem Detect the shell profile file
 set "shell_profile="
