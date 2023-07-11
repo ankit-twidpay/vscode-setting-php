@@ -54,7 +54,7 @@ if exist "%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" (
 )
 
 rem Restart the shell to apply changes
-powershell.exe -NoProfile -Command "echo Restarting shell...; shutdown /r /t 1"
+rem powershell.exe -NoProfile -Command "echo Restarting shell...; shutdown /r /t 1"
 
 rem Display success message
 echo Visual Studio Code installation completed successfully.
