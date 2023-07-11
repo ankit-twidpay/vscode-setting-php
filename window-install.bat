@@ -59,11 +59,11 @@ rem powershell.exe -NoProfile -Command "echo Restarting shell...; shutdown /r /t
 rem Display success message
 echo Visual Studio Code installation completed successfully.
 
-rem Install extensions
-for /f "usebackq tokens=*" %%I in ("extensions.txt") do code --install-extension %%I
-
 rem Copy settings file
 xcopy /Y settings.json "%APPDATA%\Code\User\settings.json"
 xcopy /Y keybindings.json "%APPDATA%\Code\User\keybindings.json"
 
 echo VS Code settings copied to the appropriate location.
+
+rem Install extensions
+for /f "usebackq tokens=*" %%I in ("extensions.txt") do code --install-extension %%I
